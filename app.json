@@ -1,0 +1,87 @@
+{
+  "expo": {
+    "name": "Wilver",
+    "slug": "wilver",
+    "version": "1.0.0",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "orientation": "portrait",
+    "scheme": "wilver",
+    "icon": "./assets/wilver-app-icon-v2.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "app.wilver.community",
+      "buildNumber": "1",
+      "config": {
+        "usesNonExemptEncryption": false
+      },
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Wilver uses approximate location to show nearby pet communities and activities."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#7758FF",
+        "foregroundImage": "./assets/wilver-mark-v2.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "allowBackup": false,
+      "package": "app.wilver.community",
+      "versionCode": 1,
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/wilver-app-icon-v2.png",
+      "name": "Wilver",
+      "shortName": "Wilver",
+      "description": "Where pet people belong.",
+      "themeColor": "#7758FF",
+      "backgroundColor": "#F8F7FF"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-splash-screen",
+      "expo-image",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Allow Wilver to find pet communities near you."
+        }
+      ],
+      "expo-secure-store",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow Wilver to choose photos you want to share with your pet community.",
+          "cameraPermission": false,
+          "microphonePermission": false
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "color": "#7758FF",
+          "defaultChannel": "community"
+        }
+      ],
+      "expo-font",
+      "@react-native-community/datetimepicker"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "530dca84-3b36-41d1-a224-56664f3eb3be"
+      }
+    },
+    "owner": "thewilver"
+  }
+}
